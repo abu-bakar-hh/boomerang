@@ -7,7 +7,7 @@ class Boomerang {
     this.skin = skin;
     this.position = 0;
   }
-
+  
   fly() {
     this.moveRight();
     this.moveLeft();

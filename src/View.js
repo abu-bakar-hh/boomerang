@@ -1,7 +1,7 @@
 // Сделаем отдельный класс для отображения игры в консоли.
 
 class View {
-  render(track, scores) {
+  render(track) {
     const yourTeamName = 'Бородачи';
 
     // Тут всё рисуем.
@@ -9,7 +9,7 @@ class View {
     console.log(track.join(''));
     console.log('\n\n');
     console.log(`Created by "${yourTeamName}" with love`);
-    console.log(`Очки: ${scores}`);
+    console.log(`Деовчек с праздником`);
   }
 }
 
