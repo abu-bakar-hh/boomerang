@@ -7,6 +7,20 @@ const keypress = require('keypress');
 // Управление.
 // Настроим соответствия нажатий на клавиши и действий в игре.
 
+class Keyboard {
+  constructor(game) {
+    this.game = game;
+    this.keyboard = {
+      q: () => this.game.boom(),
+      // w: () => this.game.hero.moveLeft(),
+      // e: () => this.game.hero.moveRight(),
+      // r: () => console.log('r'),
+      // t: () => console.log('t'),
+      // y: () => console.log('y'),
+    };
+  }
+}
+
 const keyboard = {
   q: () => console.log('q'),
   w: () => console.log('w'),
@@ -38,3 +52,7 @@ function runInteractiveConsole() {
 // Давай попробуем запустить этот скрипт!
 
 runInteractiveConsole();
+
+
+
+module.exports = Keyboard
