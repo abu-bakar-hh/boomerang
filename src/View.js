@@ -9,7 +9,7 @@ class View {
     console.log(track.join(''));
     console.log('\n\n');
     console.log(`Created by "${yourTeamName}" with love`);
-    console.log(`Деовчек с праздником`);
+    console.log(`!!!Всех прекрасных дам с праздником!!!`);
   }
 }
 

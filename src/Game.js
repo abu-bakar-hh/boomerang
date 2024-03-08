@@ -17,10 +17,11 @@ class Game {
     this.hero = new Hero(); // Герою можно аргументом передать бумеранг.
     this.bom = new Boomerang();
     this.keyboard = new Keyboard(this);
-    this.enemy = new Enemy(this.trackLength);
+    this.enemy = new Enemy(this.trackLength-1);
     this.view = new View(this.track);
     this.track = [];
     this.regenerateTrack();
+    this.score = 0;
   }
 
   regenerateTrack() {
@@ -30,15 +31,17 @@ class Game {
     this.track[this.hero.position] = this.hero.skin;
     this.track[this.bom.position] = this.bom.skin;
     this.track[this.enemy.position] = this.enemy.skin;
+    this.track[this.trackLength] = `Счастливых женщин: ${this.score}`
     this.bom.moveRight();
   }
 
   check() {
     if (this.bom.position >= this.enemy.position) {
       this.enemy.die();
-      this.enemy.position = this.trackLength;
+      this.enemy.position = this.trackLength-1;
       this.track[this.enemy.position] = this.enemy.skin;
       this.bom.position = 1;
+      this.score += 1;
     }
 
     if (this.hero.position === this.enemy.position) {
